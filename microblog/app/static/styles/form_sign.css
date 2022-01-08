@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+html {
+    font-size: 80%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #efc6ac;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #423532;
+    border-radius: 5rem;
+}
+
+
+body {
+    background-color:#efc6ac;
+    font-family: 'Poppins', sans-serif;
+}
+
+.signup-box {
+    width: 360px;
+    height: 750px;
+    margin: auto;
+    background-color:white;
+    border-radius: 3px;
+}
+
+.login-box {
+    width: 360px;
+    height: 370px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+h4 {
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin-left: 20px;
+}
+
+form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+input[type="button"] {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #2b832b;
+    color: white;
+    font-size: 18px;
+}
+
+p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.para-2 {
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    margin-top: -10px;
+}
+.para-2 a {
+    font-size: 15px;
+    color: #1f5d1f;
+}
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #efc6ac;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+
+.bottone {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #2b832b;
+    color: white;
+    font-size: 18px;
+}

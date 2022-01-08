@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 80%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #efc6ac;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #423532;
+    border-radius: 5rem;
+}
+
+
+
+
+body {
+    padding: 10px;
+    background: #efc6ac;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 100px;
+    text-align: center;
+    border-radius: 1rem;
+    background-image: url("../images/bannernapoli.jpg");
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #423532;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #efc6ac;
+    color: black;
+}
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #efc6ac;
+    padding-left: 20px;
+}
+
+
+ul.a {
+    list-style-type: circle;
+}
+
+.card {
+    background-color: #efc6ac;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #efc6ac;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}

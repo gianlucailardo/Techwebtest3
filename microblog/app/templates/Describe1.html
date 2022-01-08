@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <title>Napoli</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/Desc.css') }}"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>Napoli</h1>
+  <p>La nostra struttura parthenopea</p>
+</div>
+
+<div class="topnav">
+  <a href="{{ url_for('index') }}">Home page</a>
+    <a href="{{ url_for('index') }}">Altre strutture</a>
+  <a href="{{url_for('Prenot')}}" style="float:right">Prenota ora</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Ambiente confortevole</h2>
+      <h3>Nella nostra struttura parthenopea respirerete la tipica area campana immergendovi nelle tradizioni del luogo</h3>
+      <img src="{{ url_for('static',filename='images/stanzanapoli.png') }}">
+      <h1> I nostri prezzi:</h1>
+      <h3>Camera singola: 40 euro</h3>
+      <h3>Camera doppia: 60 euro</h3>
+      <h3>Camera familiare: 100 euro</h3>
+      <h3>Camerata: 20 euro</h3>
+    <div>
+      <h1>Intorno a noi:</h1>
+      <h3>Stazione metropolitana: 1km</h3>
+      <h3>Duomo: 800m</h3>
+      <h3>Aereoporto: 3km</h3>
+    </div>
+  </div>
+
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Tipologia camere</h2>
+      <img src="{{ url_for('static',filename='images/stanzanapoli2.png') }}">
+      <p>Singola</p>
+      <img src="{{ url_for('static',filename='images/stanzanapoli1.png') }}">
+      <p>Doppia</p>
+      <img src="{{ url_for('static',filename='images/stanzanapoli3.png') }}">
+      <p>Familiare</p>
+      <img src="{{ url_for('static',filename='images/stanzanapoli4.png') }}">
+      <p>Camerata</p>
+    </div>
+    <div class="card">
+      <h3>Strutture preferite dagli utenti</h3>
+      <ul>
+        <li>
+          <a href="">Firenze</a>
+        </li>
+        <li>
+          <a href="">Napoli</a>
+        </li>
+        <li>
+         <a href="">Roma</a>
+        </li>
+      </ul>
+
+      <h3>Seguici su instagram <br>
+        <i class="fa fa-instagram" style="font-size:36px"></i></h3>
+      <a href=""><p>@B&B_IlSole</p></a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+
+    <a href="{{ url_for('index') }}">
+       <img src="{{ url_for('static',filename='images/logosole.png') }}">
+    </a>
+</div>
+
+</body>
+</html>

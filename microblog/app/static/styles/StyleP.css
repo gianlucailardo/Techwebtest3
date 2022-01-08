@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    font-size: 80%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #efc6ac;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #423532;
+    border-radius: 5rem;
+}
+
+#main{
+    background-color: #efc6ac;
+}
+#form{
+    background-color: #000;
+    height:400px;
+    width:800px;
+    margin: auto;
+    margin-top: 100px;
+    opacity:0.7;
+    border-radius: 1rem;
+}
+#first-group{
+    border:none;
+    width:400px;
+    margin-top: 38px;
+    position: absolute;
+}
+#content{
+    border: 1px solid #fff;
+    margin:10px;
+    margin-left: 8px;
+    padding:5px;
+    border-radius: 1rem;
+}
+#content #input-group{
+    border:none;
+    outline:none;
+    background: transparent;
+    margin-left:8px;
+    width:300px;
+    color:red;
+}
+::placeholder{
+    color:red;
+}
+.bi{
+    display:inline-block;
+    color:red;
+    border-right:1px solid #fff;
+    padding:8px;
+    margin-left: 0px;
+}
+#second-group{
+    border:none;
+    width:400px;
+    margin-top: 55px;
+    margin-left:400px;
+}
+.bottone1{
+    margin-top: 4px;
+    margin-left: 600px;
+    background: transparent;
+    color:#fff;
+    width:150px;
+    border:1px solid red;
+    outline:none;
+    padding:6px;
+    font-size: 15px;
+    border-radius: 1rem;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #efc6ac;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #ffffff;
+}

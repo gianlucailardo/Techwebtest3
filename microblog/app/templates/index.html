@@ -1,0 +1,425 @@
+{% block content %}
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B&B Sole</title>
+
+    <!-- LINK AL FILE CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#"> <img src="{{ url_for('static',filename='images/logosole.png') }}"> </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#noi">noi</a>
+        <a href="#strutture">strutture</a>
+        <a href="#servizi">servizi</a>
+        <a href="#galleria">galleria</a>
+        <a href="#recensioni">recensioni</a>
+
+    </nav>
+    {% if current_user.is_anonymous %}
+   <a href="{{ url_for('login') }}" class="btn" target="_blank">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+           <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+           <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+       </svg>
+    Account
+   </a>
+    {% else %}
+    <a href="{{ url_for('logout') }}" class="btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+           <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+           <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+       </svg>
+    Log out
+   </a>
+{% endif %}
+
+
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+    <div class="content">
+        <span>B&B</span>
+            <h3>Il Sole</h3>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- booking form section starts  -->
+
+<section class="book-form" id="book-form">
+
+    <form action="{{ url_for('Prenot') }}" target="_blank">
+        <div  class="inputBox">
+            <span>Dove?</span>
+            <input type="text" placeholder="inserire luogo" value="">
+        </div>
+        <div class="inputBox">
+            <span>Quando?</span>
+            <input type="date" value="">
+        </div>
+        <div class="inputBox">
+            <span>Quanti?</span>
+            <input type="number" placeholder="numero di persone" value="" min="1">
+        </div>
+       <input  type="submit" value="Trova ora" class="btn">
+    </form>
+
+</section>
+
+<!-- booking form section ends -->
+
+<!-- noi section starts  -->
+
+<section class="noi" id="noi">
+
+<div class="video-container">
+        <video src="{{ url_for('static',filename='images/video1.mp4') }}" muted autoplay loop class="video"></video>
+</div>
+
+    <div class="content" >
+        <span>Perchè Noi?</span>
+        <h3>Ti faremo sentire a casa </h3>
+        <p> La nostra struttura ti permetterà di trascorrere un soggiorno nel completo relax e comfort </p>
+    </div>
+
+</section>
+
+<!--  noi  section ends -->
+
+<!-- strutture section starts  -->
+
+<section class="strutture" id="strutture">
+
+    <div class="heading">
+        <span>Le nostre strutture</span>
+        <h1>Scegli la tua destinazione</h1>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="{{ url_for('static',filename='images/des-1.jpg') }}" alt="">
+            </div>
+            <div class="content">
+                <h3>Napoli</h3>
+                <a href="{{ url_for('Describe1') }}" target="_blank">Vieni a scoprirci </a>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="image">
+                <img src="{{ url_for('static',filename='images/des-2.jpg') }}"  alt="">
+            </div>
+            <div class="content">
+                <h3>Milano</h3>
+                <a href="#">Vieni a scoprirci </a>
+            </div>
+        </div>
+
+        <div class="box"  >
+            <div class="image">
+                <img src="{{ url_for('static',filename='images/des-3.jpg') }}" alt="">
+            </div>
+            <div class="content">
+                <h3>Firenze</h3>
+                <a href="#">Vieni a scoprirci </a>
+            </div>
+        </div>
+
+        <div class="box"  >
+            <div class="image">
+                <img src="{{ url_for('static',filename='images/des-4.jpg') }}" alt="">
+            </div>
+            <div class="content">
+                <h3>Venezia</h3>
+                <a href="#">Vieni a scoprirci </a>
+            </div>
+        </div>
+
+        <div class="box"  >
+            <div class="image">
+                <img src="{{ url_for('static',filename='images/des-5.jpg') }}" alt="">
+            </div>
+            <div class="content">
+                <h3>Roma</h3>
+                <a href="#">Vieni a scoprirci </a>
+            </div>
+        </div>
+
+        <div class="box"  >
+            <div class="image">
+                <img src="{{ url_for('static',filename='images/des-6.jpg') }}" alt="">
+            </div>
+            <div class="content">
+                <h3>Oristano</h3>
+                <a href="#">Vieni a scoprirci </a>
+            </div>
+        </div>
+
+        <div class="box"  >
+            <div class="image">
+                <img src="{{ url_for('static',filename='images/des-7.jpg') }}" alt="">
+            </div>
+            <div class="content">
+                <h3>Palau</h3>
+                <a href="#">Vieni a scoprirci </a>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="image">
+                <img src="{{ url_for('static',filename='images/des-8.jpg') }}"  alt="">
+            </div>
+            <div class="content">
+                <h3>Sorrento</h3>
+                <a href="#">Vieni a scoprirci </a>
+            </div>
+
+        </div>
+
+    </div>
+   <div class="heading"> <a href="#" class="btn ">leggi di più</a></div>
+</section>
+
+<!-- destination section ends -->
+
+<!-- services section starts  -->
+
+<section class="servizi" id="servizi">
+
+    <div class="heading">
+        <span>Servizi</span>
+        <h1>ecco cosa offriamo</h1>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box" >
+
+            <h3>Ristorazione</h3>
+            <p>Prenota i tupi pasti</p>
+        </div>
+
+        <div class="box" >
+            <h3>Escursioni</h3>
+            <p>Organizza le tue avventure</p>
+        </div>
+
+        <div class="box"  >
+            <h3>Navetta</h3>
+            <p>Ti porteremo ovunque</p>
+        </div>
+
+        <div class="box"  >
+            <h3>Prezzi accessibili</h3>
+            <p>Divertiti, senza pensare al portafoglio</p>
+        </div>
+
+        <div class="box"  >
+            <h3>Ambiente comfortevole</h3>
+            <p>Per un massimo relax</p>
+        </div>
+
+        <div class="box" >
+            <h3>24/7 supporto</h3>
+            <p>Saremo sempre disponibili</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- gallery section starts  -->
+
+<section class="galleria" id="galleria">
+
+    <div class="heading">
+        <span>Galleria</span>
+        <h1>I nostri spazi</h1>
+    </div>
+    
+    <div class="box-container">
+
+        <div class="box">
+            <img src="{{ url_for('static',filename='images/gallery-img-1.jpg') }}" alt="">
+        </div>
+
+        <div class="box"  >
+            <img src="{{ url_for('static',filename='images/gallery-img-2.jpg') }}" alt="">
+        </div>
+
+        <div class="box"  >
+            <img src="{{ url_for('static',filename='images/gallery-img-3.jpg') }}" alt="">
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static',filename='images/gallery-img-4.jpg') }}" alt="">
+        </div>
+
+        <div class="box" >
+            <img src="{{ url_for('static',filename='images/gallery-img-5.jpg') }}" alt="">
+        </div>
+
+        <div class="box" >
+            <img src="{{ url_for('static',filename='images/gallery-img-6.jpg') }}" alt="">
+        </div>
+
+        <div class="box" >
+            <img src="{{ url_for('static',filename='images/gallery-img-7.jpg') }}" alt="">
+        </div>
+
+        <div class="box" >
+            <img src="{{ url_for('static',filename='images/gallery-img-8.jpg') }}" alt="">
+        </div>
+
+        <div class="box" >
+            <img src="{{ url_for('static',filename='images/gallery-img-9.jpg') }}" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- gallery section ends -->
+
+<!-- review section starts  -->
+
+<section class="recensioni" id="recensioni">
+
+    <div class="content" >
+        <span>Recensioni</span>
+        <h3>I vostri pareri</h3>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="user">
+                <img src="{{ url_for('static',filename='images/pic-1.png') }}" alt="">
+                <div class="info">
+                    <h3>Mario </h3>
+                </div>
+            </div>
+            <p> Luogo, mare e paesaggi fantastici fanno da cornice alla professionalità dello staff del B&B Il Sole: persone cordiali e gentili ci hanno accolto e ci hanno riservato un trattamento indimenticabile. Conto di ritornarci.</p>
+        </div>
+        <div class="box">
+            <div class="user">
+                <img src="{{ url_for('static',filename='images/pic-2.png') }}" alt="">
+                <div class="info">
+                    <h3>Giovanna</h3>
+                </div>
+            </div>
+            <p>Lo consiglio a tutti, giovani, famiglie, posizione centralissima, lunghe passeggiate e tutto ciò che può rendere la tua vacanza rilassante…le camere e la struttura perfetta</p>
+        </div>
+        <div class="box">
+            <div class="user">
+                <img src="{{ url_for('static',filename='images/pic-3.png') }}" alt="">
+                <div class="info">
+                    <h3>Giacomo</h3>
+                </div>
+            </div>
+            <p>È stato un piacere soggiornare in questo b&b, lo staff e il proprietario mostrano tutte le qualità professionali che si desidera durante una vacanza relax.</p>
+        </div>
+        <div class="box">
+            <div class="user">
+                <img src="{{ url_for('static',filename='images/pic-4.png') }}" alt="">
+                <div class="info">
+                    <h3>Luisa</h3>
+                </div>
+            </div>
+            <p> La struttura è proprio accogliente e impeccabile la pulizia.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+
+<!-- banner section starts  -->
+
+<div class="banner">
+
+    <div class="content" >
+        <span>Inizia il tuo soggiorno</span>
+        <h3>Goditi le nostre coccole</h3>
+        <a href="{{ url_for('Prenot') }}" target="_blank" class="btn">prenota ora </a>
+    </div>
+
+</div>
+
+<!-- banner section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box" >
+            <a href="#" >  <img src="{{ url_for('static',filename='images/logo.png') }}"> </a>
+        </div>
+
+        <div class="box">
+            <h3>link veloci</h3>
+            <a href="#home" class="links"> home </a>
+            <a href="#noi" class="links"> noi </a>
+            <a href="#strutture" class="links"> strutture </a>
+            <a href="#servizi" class="links"> servizi </a>
+            <a href="#galleria" class="links"> galleria </a>
+            <a href="#recensioni" class="links"> recensioni </a>
+        </div>
+
+        <div class="box" >
+            <h3>Contatti </h3>
+            <p> napoli, italia </p>
+            <p> 081-456-45-67 </p>
+            <p> bnbilsole@gmail.com </p>
+
+        </div>
+
+        <div class="box" >
+            <h3>newsletter</h3>
+            <p>iscriviti per gli ultimi aggiornamenti</p>
+            <form action="" method="post" novalidate>
+                 {{ form.hidden_tag() }}
+                {{ form.news_email(class="email", placeholder="inserisci email") }}
+                 {% for error in form.news_email.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                {{form.submit(class='btn')}}
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="credit">creato da <span> IS GT FZ GI GO </span> </div>
+
+<!-- footer section ends -->
+</body>
+</html>
+{% endblock %}

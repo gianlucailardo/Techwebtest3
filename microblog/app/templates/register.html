@@ -1,0 +1,61 @@
+{% block content %}
+<html lang="it">
+<head>
+  <title>Registrazione</title>
+ <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/form_sign.css') }}">
+</head>
+<body>
+<div class="signup-box">
+  <h1>Registrati</h1>
+  <form action="" method="post" novalidate>
+      {{ form.hidden_tag() }}
+      {{ form.username.label }}
+       {{ form.username(size=32) }}
+      {% for error in form.username.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+      {{ form.nome.label}}
+      {{ form.nome(size=32) }}
+    {% for error in form.nome.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+    {{ form.cognome.label}}
+      {{ form.cognome(size=32) }}
+    {% for error in form.cognome.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+    {{ form.email.label }}
+      {{ form.email(size=32) }}
+    {% for error in form.email.errors %}
+      <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+    {{ form.password.label }}
+      {{ form.password(size=32) }}
+    {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+     {{ form.password2.label }}
+      {{ form.password2(size=32) }}
+     {% for error in form.password2.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+
+    <span>{{ form.submit(class='bottone') }} </span>
+  </form>
+</div>
+
+  <p class="para-2">
+    Possiedi un account? <a href="{{ url_for('login') }}">Accedi qui</a>
+  </p>
+<div class="footer">
+
+  <a href="{{ url_for('index') }}">
+    <img src="../static/images/logosole.png">
+  </a>
+</div>
+
+</body>
+</html>
+{% endblock %}
+
+
