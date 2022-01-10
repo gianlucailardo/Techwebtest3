@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B&B Sole</title>
+    <!-- MANIFEST -->
+    <link rel="manifest" href="{{ url_for('static',filename='manifest.json') }}">
+    <meta name="theme-color" content="white"/>
 
     <!-- LINK AL FILE CSS -->
     <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
 </head>
 <body>
 
-<!-- header section starts  -->
+<!-- Inizio sezione header -->
 
 <header class="header">
 
@@ -47,9 +50,9 @@
 
 </header>
 
-<!-- header section ends -->
+<!-- Fine sezione header -->
 
-<!-- home section starts  -->
+<!-- Inizio sezione di home -->
 
 <section class="home" id="home">
     <div class="content">
@@ -59,9 +62,9 @@
 
 </section>
 
-<!-- home section ends -->
+<!-- Fine sezione di home-->
 
-<!-- booking form section starts  -->
+<!-- Inizio sezione form di prenotazione   -->
 
 <section class="book-form" id="book-form">
 
@@ -83,9 +86,9 @@
 
 </section>
 
-<!-- booking form section ends -->
+<!-- Fine sezione di prenotazione-->
 
-<!-- noi section starts  -->
+<!-- Sezione noi inizio  -->
 
 <section class="noi" id="noi">
 
@@ -101,9 +104,9 @@
 
 </section>
 
-<!--  noi  section ends -->
+<!--  Fine sezione inizio -->
 
-<!-- strutture section starts  -->
+<!-- Inizio sezione strutture  -->
 
 <section class="strutture" id="strutture">
 
@@ -199,9 +202,9 @@
    <div class="heading"> <a href="#" class="btn ">leggi di più</a></div>
 </section>
 
-<!-- destination section ends -->
+<!-- Fine sezione -->
 
-<!-- services section starts  -->
+<!-- Inizio sezione servizi  -->
 
 <section class="servizi" id="servizi">
 
@@ -247,9 +250,9 @@
 
 </section>
 
-<!-- services section ends -->
+<!-- Fine sezione servizi -->
 
-<!-- gallery section starts  -->
+<!-- Inizio sezione galleria  -->
 
 <section class="galleria" id="galleria">
 
@@ -300,9 +303,9 @@
 
 </section>
 
-<!-- gallery section ends -->
+<!-- Fine sezione galleria -->
 
-<!-- review section starts  -->
+<!-- Inizio sezione recensioni -->
 
 <section class="recensioni" id="recensioni">
 
@@ -354,10 +357,10 @@
 
 </section>
 
-<!-- review section ends -->
+<!-- Fine sezione recensioni -->
 
 
-<!-- banner section starts  -->
+<!-- Inizio sezione banner  -->
 
 <div class="banner">
 
@@ -369,9 +372,9 @@
 
 </div>
 
-<!-- banner section ends -->
+<!-- Fine sezione banner -->
 
-<!-- footer section starts  -->
+<!-- Inizio sezione footer  -->
 
 <section class="footer">
 
@@ -419,7 +422,9 @@
 
 <div class="credit">creato da <span> IS GT FZ GI GO </span> </div>
 
-<!-- footer section ends -->
+<!-- Fine sezione footer -->
+<!-- javascript -->
+<script src="{{ url_for('static',filename='scripts.js') }}"></script>
 </body>
 </html>
 {% endblock %}
