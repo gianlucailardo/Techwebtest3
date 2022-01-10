@@ -1,0 +1,18 @@
+{
+  "name": "B&BIlSole",
+  "short_name": "B&BIlSole",
+  "description": "B&BIlSole PWA",
+  "icons": [
+      {
+      "src": "images/sunny.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en-US",
+  "start_url": "/index.html",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "black",
+  "theme_color": "white"
+}
