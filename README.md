@@ -4,8 +4,8 @@ Realizzazione di un'applicazione web attraverso il framework di python "flask" p
 Attraverso l'applicazione l'utente può visualizzare le strutture e le recensioni, registrarsi all'app e prenotare una camera ricevendo anche una mail di conferma. Potrà inoltre registrarsi alla newsletter.
 Contribuenti:
 - [Gianluca Ilardo](https://github.com/gianlucailardo)
-Gianfranco Terrazzano
-Ilaria Scuotto
-Francesco Zibaldo
+- [Gianfranco Terrazzano](https://github.com/Gianf01)
+- [Ilaria Scuotto](https://github.com/ilariascuotto)
 - [Giuseppe Orlando](https://github.com/Giusorl)
+Francesco Zibaldo
 
