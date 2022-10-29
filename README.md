@@ -7,5 +7,5 @@ Contribuenti:
 Gianfranco Terrazzano
 Ilaria Scuotto
 Francesco Zibaldo
-Giuseppe Orlando
+- [Giuseppe Orlando](https://github.com/Giusorl)
 
