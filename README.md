@@ -7,5 +7,5 @@ Contribuenti:
 - [Gianfranco Terrazzano](https://github.com/Gianf01)
 - [Ilaria Scuotto](https://github.com/ilariascuotto)
 - [Giuseppe Orlando](https://github.com/Giusorl)
-Francesco Zibaldo
+- [Francesco Zibaldo](https://github.com/francescozibaldo)
 
